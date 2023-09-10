@@ -1,0 +1,51 @@
+<mat-toolbar id="scrolling-toolbar" [@toolbarHeight]="toolbarState">
+  <div class="toolbar-left" *ngIf="!isSmallScreen">
+    <div>
+      <button
+        mat-flat-button
+        (mouseenter)="toggleHovered()"
+        (mouseleave)="toggleHovered()"
+      >
+        info@immo-invest-solutions.de
+      </button>
+    </div>
+    <div>
+      <mat-icon
+        class="email-icon"
+        [class.email-icon-visible]="isHovered"
+        style="margin-top: 10px"
+      >
+        email
+      </mat-icon>
+    </div>
+  </div>
+  <div *ngIf="!isSmallScreen" class="toolbar-middle">
+    <img
+      src="../../assets/c4d0f217-a637-4365-8f66-c4583e2e755b.png"
+      width="auto"
+      height="90px"
+    />
+  </div>
+  <div [ngClass]="{ 'toolbar-right': !isSmallScreen, sidenav: isSmallScreen }">
+    <a href="#">Über uns</a>
+    <a href="#">Leistungen</a>
+    <a href="#">Fragebogen</a>
+  </div>
+</mat-toolbar>
+<!-- <mat-sidenav-container>
+  <mat-toolbar id="scrolling-toolbar" [@toolbarHeight]="toolbarState">
+    <button *ngIf="isSmallScreen" mat-icon-button (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-sidenav *ngIf="isSmallScreen" mode="over" opened="false">
+    <mat-nav-list>
+      <a mat-list-item href="#">Sidebar Item 1</a>
+      <a mat-list-item href="#">Sidebar Item 2</a>
+      <a mat-list-item href="#">Sidebar Item 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content> </mat-sidenav-content>
+</mat-sidenav-container> -->

@@ -1,0 +1,80 @@
+.toolbar-left,
+.toolbar-right {
+  width: 400px; /* Adjust the width as needed */
+  /* Add any other styles you want for the left and right elements */
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.toolbar-right a:hover {
+  color: #007bff;
+}
+.mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  transition: background-color 0.5s ease, height 0.5s ease;
+}
+.mat-toolbar.small {
+  height: 80px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .toolbar-left {
+    display: none;
+  }
+  .toolbar-right {
+    display: none;
+  }
+  .sidenav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidenav a {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .sidenav {
+    display: none;
+  }
+}
+
+button {
+  font-size: 12px !important;
+  background-color: transparent !important;
+  gap: 10px;
+}
+
+.mat-icon {
+  font-size: 15px !important;
+}
+.email-icon {
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.email-icon-visible {
+  transform: translateX(50%);
+}

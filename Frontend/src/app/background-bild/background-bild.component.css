@@ -1,0 +1,106 @@
+/* Styles for the background image container */
+.background-image {
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.text-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 250px; /* Adjust the top value to move the text higher */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.text-overlay button {
+  font-size: 24px; /* Adjust the font size to make it bigger */
+  padding: 15px 30px; /* Adjust the padding to make it bigger */
+  margin-top: 50px;
+}
+
+.text-overlay h1 {
+  font-size: 90px; /* Adjust the font size as needed */
+  color: rgb(0, 0, 0); /* Text color */
+  /* You can add additional styles (e.g., font-family) here */
+}
+.text-overlay h2 {
+  font-size: 50px; /* Adjust the font size as needed */
+  color: rgb(0, 0, 0); /* Text color */
+  margin-top: 150px;
+}
+.text-overlay h3 {
+  font-size: 30px; /* Adjust the font size as needed */
+  color: rgb(0, 0, 0); /* Text color */
+  margin-top: 50px;
+}
+
+/* Styles for the buttons */
+.custom-button {
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 20px 25px;
+  font-size: 18px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 0.3s ease forwards; /* Add a fadeIn animation */
+}
+
+.custom-button:first-child {
+  background-color: rgba(107, 107, 107, 0.9);
+}
+
+.custom-button:last-child {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-right: 0;
+}
+
+.custom-button:hover {
+  background-color: rgba(42, 110, 48, 1);
+  opacity: 1;
+  color: #fff;
+}
+
+.text-overlay h1 {
+  font-size: 90px;
+  color: rgb(0, 0, 0);
+  animation: zoomIn 2s ease-in-out; /* Add animation properties */
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animation to make buttons appear after 3 seconds */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Delay the fadeIn animation by 3 seconds */
+.custom-button {
+  animation-delay: 2s;
+}
+
+.button-container {
+  margin-top: 100px;
+}

@@ -1,0 +1,17 @@
+<div
+  class="background-image"
+  [style.background-image]="'url(' + backgroundImageUrl + ')'"
+>
+  <div class="text-overlay">
+    <h1 [style.font-size]="h1FontSize" [style.color]="h1Color">
+      {{ headerText }}
+    </h1>
+    <h2 [style.font-size]="h2FontSize" [style.color]="h2Color">{{ h2Text }}</h2>
+
+    <div class="button-container">
+      <button mat-button class="custom-button">
+        Jetzt Erstgespräch sichern!
+      </button>
+    </div>
+  </div>
+</div>
